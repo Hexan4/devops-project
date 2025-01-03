@@ -1,5 +1,5 @@
 # 1. Wybierz oficjalny obraz Pythona jako bazę
-FROM python:3.9-slim
+FROM python:3.10
 
 # 2. Ustaw katalog roboczy w kontenerze
 WORKDIR /app
