@@ -8,6 +8,9 @@ def home():
     <h1>test flask siema</h1>
     <p>test stronki oby bylo git</p>
     """
+@app.route("/hello2")
+def hello2():
+    return "Hello2 from new endpoint!"
 
 @app.route("/hello")
 def hello():
