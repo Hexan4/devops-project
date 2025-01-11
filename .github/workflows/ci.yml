@@ -28,7 +28,7 @@ jobs:
           echo "Test - w tym miejscu mogłyby zostać uruchomione testy jednostkowe"
 
       - name: Log in to GitHub Container Registry
-        if: github.event_name == 'push'  # lub warunek, który wolisz
+        if: github.event_name == 'push'
         run: |
           echo "${{ secrets.GITHUB_TOKEN }}" | docker login ghcr.io -u ${{ github.actor }} --password-stdin
 
@@ -39,5 +39,5 @@ jobs:
       - name: Push Docker image
         if: github.event_name == 'push'
         run: |
-          docker tag my-flask-app:${{ github.sha }} ghcr.io/${{ github.repository_owner }}/my-flask-app:${{ github.sha }}
-          docker push ghcr.io/${{ github.repository_owner }}/my-flask-app:${{ github.sha }}
+          docker tag my-flask-app:${{ github.sha }} ghcr.io/hexan4/my-flask-app:${{ github.sha }}
+          docker push ghcr.io/hexan4/my-flask-app:${{ github.sha }}
