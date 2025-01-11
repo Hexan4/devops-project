@@ -41,3 +41,4 @@ jobs:
         run: |
           docker tag my-flask-app:${{ github.sha }} ghcr.io/hexan4/my-flask-app:${{ github.sha }}
           docker push ghcr.io/hexan4/my-flask-app:${{ github.sha }}
+
